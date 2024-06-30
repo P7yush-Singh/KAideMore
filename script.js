@@ -49,7 +49,7 @@ acordino.forEach((Acordino => {
 }))
 
 // Scroll Reveal
-ScrollReveal().reveal(".A-h1,.Acordino, .A-sc, .F, .S", { delay:2, scale: 2, reset: true, rotate: {
+ScrollReveal().reveal(".A-h1,.Acordino, .A-sc, .F, .S, .plans", { delay:2, scale: 2, reset: true, rotate: {
   x: 20,
   y: 12,
   z: 0

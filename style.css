@@ -169,6 +169,7 @@ header.Sticky .text {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .sidebar {
@@ -308,63 +309,6 @@ header ul li a:hover::before {
   transform-origin: bottom right;
 }
 
-
-/* Responsive */
-@media (max-width: 935px) {
-  header .logo {
-    width: 40px;
-  }
-
-  header .text {
-    font-size: 1rem;
-  }
-
-  header ul li a {
-    font-size: 0.8rem;
-  }
-
-  .right .right-content img {
-    width: 280px;
-  }
-
-  .custom-shape-divider-bottom-1717836683 svg {
-    position: relative;
-    display: block;
-    width: calc(100%);
-    height: 96px;
-  }
-
-  /* Contact Page Responsive */
-  .container-f form{
-    max-width: 600px;
-    max-height: 380px;
-  }
-  .container-f form input {
-    width: 260px;
-    height: 40px;
-    padding-left: 10px;
-    border: none;
-    font-size: 15px;
-    margin-bottom: 10px;
-    background: none;
-    color: white;
-    border-bottom: 2px solid #fff;
-}
-  #contact .container-f form textarea {
-    background: none;
-    border: none;
-    border-bottom: 2px solid #fff;
-    color: #fff;
-    font-weight: 200;
-    font-size: 12px;
-    padding: 10px;
-    outline: none;
-    min-width: 580px;
-    max-width: 580px;
-    min-height: 80px;
-    max-height: 80px;
-}
-}
 /* About Page */
 #About{
   background-color: rgb(35, 35, 35);
@@ -382,7 +326,6 @@ header ul li a:hover::before {
   padding: 20px;
 }
 .About-Div p{
- text-align: justify;
  font-weight: 500;
  padding-bottom: 10px;
  color: #fff;
@@ -411,9 +354,6 @@ header ul li a:hover::before {
 }
 h4{
   font-size: larger;
-  color:c1121f;
-}h1{
-  color:c1121f;
 }
 .Acordino{
   margin: 20px 100px;
@@ -790,9 +730,10 @@ h4{
 
 /* Pricing Page */
 #pricing {
-  background-image: url(Assest/image.png);
+  background-image: url(Assest/apply-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 100%;
 
@@ -810,7 +751,7 @@ h4{
   margin: 30px;
   width: 500px;
   height: 180px;
-  background-color: rgba(119, 245, 213, 1);
+  background-color: rgba(250, 245, 250, 0.15);
   text-align: center;
   border-radius: 20px;
   padding: 20px;
@@ -833,7 +774,7 @@ h4{
 }
 
 .plans:hover {
-  background-color: rgba(75, 17, 102, 0.877);
+  background-color: rgba(250, 250, 250, 0.30);
   transition: 0.5s;
   cursor: pointer;
   box-shadow: 5px 5px 20px rgb(243, 225, 250);
@@ -854,8 +795,7 @@ h4{
 
 }
 
-.plans:hover h1,
-.plans:hover p {
+.plans:hover h1, .plans:hover p {
   color: white;
 }
 
@@ -869,10 +809,6 @@ h4{
 }
 
 /* Contact Page */
-#contact{
-  width: 100%;
-  height: 100vh;
-}
 
 .container-f form{
   width: 720px;
@@ -896,7 +832,7 @@ h4{
 }
 
 .container-f form input{
-  width: 260px;
+  width: 300px;
   height: 40px;
   padding-left: 10px;
   outline: none;
@@ -955,8 +891,7 @@ textarea::-webkit-scrollbar-thumb{
   font-weight: 600;
   font-size: 20px;
   color: #000;
-  width: 100px;
-  padding: 0;
+  padding: 0 20px;
   margin-right: 500px;
   margin-bottom: 30px;
   transition: 0.3s;
@@ -978,16 +913,7 @@ textarea::-webkit-scrollbar-thumb{
   background-repeat: no-repeat;
   max-width: 100%;
   flex-wrap: wrap;
-  padding-left: 2rem;
 }
-/* DownSide Arrow */
-.topbar{
-  display: block;
-  margin-top: 53%;
-  margin-left: 95%;
-  position: fixed;
-}
-
 /* Footer */
 .foot{
   background-color: rgb(35, 35, 35);
@@ -1003,6 +929,11 @@ textarea::-webkit-scrollbar-thumb{
 }
 .foot-container{
   display: flex;
+}
+.foot-set-align{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 .foot-left, .foot-right{
   width: 50%;
@@ -1105,12 +1036,191 @@ textarea::-webkit-scrollbar-thumb{
   background-color: #31771a;
   box-shadow: 0 0 5px 5px #57d92d;
 }
+/* Responsive Part */
+@media (max-width: 932px) {
+  header{
+    right: 0;
+  }
+  header .logo {
+    width: 40px;
+  }
 
-@media (max-width: 900px) {
+  header .text {
+    font-size: 1rem;
+  }
+
+  header ul li a {
+    font-size: 0.8rem;
+  }
+  header.Sticky .logo {
+    width: 40px;
+    padding-left: 25px;
+    margin-right: 15px;
+}
+  header.Sticky ul{
+    justify-content: center;
+    align-items: center;
+  }
+  header.Sticky .text{
+    font-size: 0.9rem;
+  }
+
+  .right .right-content img {
+    width: 280px;
+  }
+
+  .custom-shape-divider-bottom-1717836683 svg {
+    position: relative;
+    display: block;
+    width: calc(100%);
+    height: 96px;
+  }
+  /* About Page */
+  .About-Div p{
+    font-size: 1.1rem;
+  }
+  .About-Div .F, .About-Div .S{
+    line-height: 1.5;
+  }
+  h4{
+    font-size: large;
+  }
+  .question h3{
+    font-size: 1.6rem;
+  }
+  .answer p{
+    font-size: 1.1rem;
+  }
+  /* Pricing Page */
+  .plans{
+    width: 400px;
+    height: 160px;
+    padding: 25px;
+  }
+  .plans p {
+    font-size: 1.1rem;
+  }
+  
+  /* Contact Page */
+  .container-f form{
+    width: 580px;
+    height: 380px;
+    padding-left: 15px;
+  }
+  .container-f form h1{
+    font-size: 1.2rem;
+  }
+  .container-f form input{
+    width: 260px;
+    font-size: 14px;
+  }
+  .container-f form h4{
+    font-size: 1rem;
+  }
+  .container-f form textarea{
+    min-width: 530px;
+    max-width: 530px;
+  }
+}
+
+@media (max-width: 645px) {
+  /* About Page */
+  .About-Div p{
+    font-size: 1rem;
+  }
+  .About-Div .F, .About-Div .S{
+    line-height: 1.5;
+  }
+  h4{
+    font-size: large;
+  }
+  .question h3{
+    font-size: 1.4rem;
+  }
+  .answer p{
+    font-size: 1rem;
+  }
+  /* Pricing Page */
+  .pricing{
+    padding: 0;
+  }
+  .plans{
+    width: 350px;
+    height: 150px;
+    padding: 25px;
+  }
+  .plans p {
+    font-size: 1rem;
+  }
+  /* Contact Page */
+  .container-f form{
+    width: 400px;
+    height: 320px;
+  }
+  .container-f form h1{
+    font-size: 1rem;
+  }
+  .container-f form input{
+    width: 160px;
+  }
+  .container-f form h4{
+    font-size: 0.8rem;
+  }
+  .container-f form textarea{
+    min-width: 350px;
+    max-width: 350px;
+    min-height: 0;
+  }
+  /* Footer */
+  .foot-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .foot-set-align{
+    display: flex;
+    flex-direction: row;
+  }
+  .foot-h1 {
+    margin-left: 30px;
+    font-size: 1.8rem;
+  }
+  .foot-right ul{
+    gap: 2.5rem;
+  }
+  .foot-mid{
+    padding-left: 30px;
+  }
+  .foot-mid-mid p{
+    font-size: 1rem;
+  }
+  .foot-mid ul{
+    gap: 1.5rem;
+    margin-bottom: 25px;
+    margin-left: 20px;
+  }
+  .foot-mid-h1{
+    font-size: 1.4rem;
+  }
+  .foot-left-side{
+    width: 100%;
+  }
+  .foot-mid-mid {
+    width: 100%;
+    margin-left: 0;
+}
+.foot-color p, .foot-color a {
+  margin: 20px;
+  text-align: center;
+  width: auto;
+}
+.foot-color ul li a{
+  font-size: 0.9rem;
+}
   
 }
 
 @media (max-width: 455px) {
+
   .hide {
     display: none;
   }
@@ -1118,36 +1228,101 @@ textarea::-webkit-scrollbar-thumb{
   .menu {
     display: block;
   }
-  header {
-    left: auto;
-    right: auto;
-    width: 75%;
-}
-  header .logo{
-    padding-left: 30px;
+  /* About Page */
+  .About-Div p{
+    font-size: 0.8rem;
   }
-  header.Sticky .logo {
-    width: 30px;
-}
-header .text {
-  font-size: 0.8rem;
-}
-  header.Sticky {
-        left: auto;
-        right: auto;
-        width: 70%;
-        margin-top: 20px;
-        background-color: rgb(35, 35, 35);
-    }
-    header.Sticky .text{
-      font-size: 0.8rem;
-    }
-    .content h2 {
-      font-size: 1.2rem;
-      color: #fed9b7;
-      padding-top: 65%;
+  .About-Div .F, .About-Div .S{
+    line-height: 1.5;
+    font-size: 0.8rem;
   }
-
-
-    /* Contact Page Responsive */
+  .foundation{
+    margin: 0;
+  }
+  h4{
+    font-size: large;
+  }
+  .question h3{
+    font-size: 1.1rem;
+  }
+  .answer p{
+    font-size: 0.9rem;
+  }
+  /* Pricing Page */
+  .plans{
+    width: 250px;
+    height: 140px;
+    padding: 25px;
+  }
+  .plans p {
+    font-size: 0.9rem;
+  }
+  .plans:nth-child(1), .plans:nth-child(2), .plans:nth-child(3) {
+    align-self: center;
+  }
+  
+  
+  /* Contact Page */
+  .container-f form{
+    width: 330px;
+    height: 330px;
+  }
+  .container-f form h1{
+    font-size: 0.9rem;
+  }
+  .container-f form input{
+    width: 120px;
+  }
+  .container-f form h4{
+    font-size: 0.6rem;
+  }
+  .container-f form textarea{
+    min-width: 260px;
+    max-width: 260px;
+    min-height: 0;
+  }
+  /* Footer  */
+  .foot-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .foot-set-align{
+    display: flex;
+    flex-direction: row;
+  }
+  .foot-h1 {
+    margin-left: 30px;
+    font-size: 1rem;
+  }
+  .foot-right ul{
+    gap: 1.2rem;
+  }
+  .foot-mid{
+    padding-left: 15px;
+  }
+  .foot-mid-mid p{
+    font-size: 0.9rem;
+  }
+  .foot-mid ul{
+    gap: 1rem;
+    margin-bottom: 15px;
+  }
+  .foot-left-side{
+    width: 100%;
+  }
+  .foot-mid-mid {
+    width: 100%;
+    margin-left: 0;
+}
+.foot-color p, .foot-color a {
+  margin: 20px;
+  text-align: center;
+  width: auto;
+}
+.foot-color ul li a{
+  font-size: 0.9rem;
+}
+.foot-mid-h1{
+  font-size: 1rem;
+}
 }
