@@ -54,6 +54,12 @@ ScrollReveal().reveal(".A-h1,.Acordino, .A-sc, .F, .S, .plans", { delay:2, scale
   y: 12,
   z: 0
 } } );
+
+ScrollReveal().reveal(".plans", { delay: 250, duration:500, scale: 2, reset: true, rotate: {
+  x: 20,
+  y: 12,
+  z: 0
+} } );
 // Image Slider 
 $(".step").click( function() {
 	$(this).addClass("active").prevAll().addClass("active");
