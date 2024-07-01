@@ -842,8 +842,8 @@ h4{
   background: none;
   color: white;
   border-bottom: 2px solid #fff;
+  transition: 0.3s;
 }
-
 .container-f form input::placeholder{
   color: #ddd;
 }
@@ -974,8 +974,9 @@ textarea::-webkit-scrollbar-thumb{
   list-style: none;
 }
 .foot-mid ul li a{
-  color: #fff;
+  color: #cfcfcf;
   text-decoration: none;
+  transition: 0.4s ease;
 }
 .foot-left-side{
   width: 50%;
@@ -1035,6 +1036,12 @@ textarea::-webkit-scrollbar-thumb{
 .foot-mid-mid a:hover{
   background-color: #31771a;
   box-shadow: 0 0 5px 5px #57d92d;
+}
+.foot-mid ul li a:hover{
+  color: #ffffff;
+  background-color: rgba(250, 250, 250, 0.15);
+  padding: 5px 10px;
+  border-bottom: 3px solid white;
 }
 /* Responsive Part */
 @media (max-width: 932px) {
